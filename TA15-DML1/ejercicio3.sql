@@ -6,8 +6,8 @@ USE ejercicio9;
 
 create table Cientificos(
 	dni varchar(8),
-    nom_apels varchar(255),
-    primary key (dni)
+	nom_apels varchar(255),
+	primary key (dni)
 );
 
 insert into Cientificos values
@@ -26,9 +26,9 @@ select * from Cientificos;
 
 create table Proyecto(
 	id char(4),
-    nombre varchar(255),
-    horas int,
-    primary key (id)
+	nombre varchar(255),
+	horas int,
+	primary key (id)
 );
 
 insert into Proyecto values
@@ -47,10 +47,10 @@ select * from Proyecto;
 
 create table Asignado_a(
 	dni_cientifico varchar(8),
-    id_proyecto char(4),
-    primary key (dni_cientifico, id_proyecto),
-    foreign key (dni_cientifico) references Cientificos (dni) on delete cascade on update cascade,
-    foreign key (id_proyecto) references Proyecto (id) on delete cascade on update cascade
+	id_proyecto char(4),
+	primary key (dni_cientifico, id_proyecto),
+	foreign key (dni_cientifico) references Cientificos (dni) on delete cascade on update cascade,
+	foreign key (id_proyecto) references Proyecto (id) on delete cascade on update cascade
 );
 
 insert into Asignado_a values
