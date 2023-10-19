@@ -11,6 +11,16 @@ create table Empresa(
     telefono varchar(20),
     primary key (cif)
 );
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
+insert into Empresa values();
 
 create table Alumno(
 	dni varchar(20),
