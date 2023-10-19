@@ -63,16 +63,16 @@ create table Volumenes(
     foreign key (isbn) references Libros (isbn) on delete cascade on update cascade,
     primary key (id_volumen)
 );
-insert into Escribir values(1,1,1);
-insert into Escribir values(2,2,2);
-insert into Escribir values(3,3,3);
-insert into Escribir values(4,4,4);
-insert into Escribir values(5,5,5);
-insert into Escribir values(6,6,6);
-insert into Escribir values(7,7,7);
-insert into Escribir values(8,8,8);
-insert into Escribir values(9,9,9);
-insert into Escribir values(10,10,10);
+insert into Volumenes values(1,1,1);
+insert into Volumenes values(2,2,2);
+insert into Volumenes values(3,3,3);
+insert into Volumenes values(4,4,4);
+insert into Volumenes values(5,5,5);
+insert into Volumenes values(6,6,6);
+insert into Volumenes values(7,7,7);
+insert into Volumenes values(8,8,8);
+insert into Volumenes values(9,9,9);
+insert into Volumenes values(10,10,10);
 
 create table Personas(
 	dni varchar(9),
@@ -104,13 +104,13 @@ create table Prestamos(
     foreign key (dni) references Personas (dni) on delete cascade on update cascade,
     primary key (id_prestamo)
 );
-insert into Personas values (1, "10-09-2011","10-10-2011", 1, '39393939A', 1);
-insert into Personas values (2, "10-09-2012","10-10-2012", 2, '39393939B', 2);
-insert into Personas values (3, "10-09-2013","10-10-2013", 3, '39393939C', 3);
-insert into Personas values (4, "10-09-2014","10-10-2014", 4, '39393939D', 4);
-insert into Personas values (5, "10-09-2015","10-10-2015", 5, '39393939E', 5);
-insert into Personas values (6, "10-09-2016","10-10-2016", 6, '39393939F', 6);
-insert into Personas values (7, "10-09-2017","10-10-2017", 7, '39393939G', 7);
-insert into Personas values (8, "10-09-2018","10-10-2018", 8, '39393939H', 8);
-insert into Personas values (9, "10-09-2019","10-10-2019", 9, '39393939I', 9);
-insert into Personas values (10,"10-09-2020","10-10-2020", 10,'39393939J', 10);
+insert into Prestamos values (1, "10-09-2011","10-10-2011", 1, '39393939A', 1);
+insert into Prestamos values (2, "10-09-2012","10-10-2012", 2, '39393939B', 2);
+insert into Prestamos values (3, "10-09-2013","10-10-2013", 3, '39393939C', 3);
+insert into Prestamos values (4, "10-09-2014","10-10-2014", 4, '39393939D', 4);
+insert into Prestamos values (5, "10-09-2015","10-10-2015", 5, '39393939E', 5);
+insert into Prestamos values (6, "10-09-2016","10-10-2016", 6, '39393939F', 6);
+insert into Prestamos values (7, "10-09-2017","10-10-2017", 7, '39393939G', 7);
+insert into Prestamos values (8, "10-09-2018","10-10-2018", 8, '39393939H', 8);
+insert into Prestamos values (9, "10-09-2019","10-10-2019", 9, '39393939I', 9);
+insert into Prestamos values (10,"10-09-2020","10-10-2020", 10,'39393939J', 10);
