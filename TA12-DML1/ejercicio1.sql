@@ -104,13 +104,13 @@ create table Prestamos(
     foreign key (dni) references Personas (dni) on delete cascade on update cascade,
     primary key (id_prestamo)
 );
-insert into Prestamos values (1, "10-09-2011","10-10-2011", 1, '39393939A', 1);
-insert into Prestamos values (2, "10-09-2012","10-10-2012", 2, '39393939B', 2);
-insert into Prestamos values (3, "10-09-2013","10-10-2013", 3, '39393939C', 3);
-insert into Prestamos values (4, "10-09-2014","10-10-2014", 4, '39393939D', 4);
-insert into Prestamos values (5, "10-09-2015","10-10-2015", 5, '39393939E', 5);
-insert into Prestamos values (6, "10-09-2016","10-10-2016", 6, '39393939F', 6);
-insert into Prestamos values (7, "10-09-2017","10-10-2017", 7, '39393939G', 7);
-insert into Prestamos values (8, "10-09-2018","10-10-2018", 8, '39393939H', 8);
-insert into Prestamos values (9, "10-09-2019","10-10-2019", 9, '39393939I', 9);
-insert into Prestamos values (10,"10-09-2020","10-10-2020", 10,'39393939J', 10);
+insert into Prestamos values (1,"2021-10-10","2021-12-10", 1, '39393939A', 1);
+insert into Prestamos values (2,"2022-10-10","2022-12-10", 2, '39393939B', 2);
+insert into Prestamos values (3,"2023-10-10","2023-12-10", 3, '39393939C', 3);
+insert into Prestamos values (4,"2024-10-10","2024-12-10", 4, '39393939D', 4);
+insert into Prestamos values (5,"2025-10-10","2025-12-10", 5, '39393939E', 5);
+insert into Prestamos values (6,"2026-10-10","2026-12-10", 6, '39393939F', 6);
+insert into Prestamos values (7,"2027-10-10","2027-12-10", 7, '39393939G', 7);
+insert into Prestamos values (8,"2028-10-10","2028-12-10", 8, '39393939H', 8);
+insert into Prestamos values (9,"2029-10-10","2029-12-10", 9, '39393939I', 9);
+insert into Prestamos values (10,"2030-10-10","2030-12-10", 10,'39393939J', 10);
