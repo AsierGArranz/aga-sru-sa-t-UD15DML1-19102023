@@ -4,11 +4,10 @@ CREATE DATABASE ejercicio8;
 
 USE ejercicio8;
 
-
 create table Proveedores(
 	id varchar(4),
-    nombre varchar(100),
-    primary key (id)
+	nombre varchar(100),
+	primary key (id)
 );
 
 insert into Proveedores values
