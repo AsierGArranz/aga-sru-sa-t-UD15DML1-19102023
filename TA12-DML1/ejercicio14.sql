@@ -6,48 +6,48 @@ use ejercicio14;
 
 create table Usuario(
 	id_usuario int auto_increment,
-    nombre varchar(20),
-    apellidos varchar(50),
-    contraseña varchar(50),
-    direccion varchar(50),
-    telefono int,
-    email varchar (100),
-    foto varchar(255),
-    celebridad boolean,
-    primary key(id_usuario)
+	nombre varchar(20),
+	apellidos varchar(50),
+	contraseña varchar(50),
+	direccion varchar(50),
+	telefono int,
+	email varchar (100),
+	foto varchar(255),
+	celebridad boolean,
+	primary key(id_usuario)
 );
 create table Contactos(
 	id_usuario int,
 	id_usuario_contacto int,
-    primary key (id_usuario,id_usuario_contacto),
-    foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade,
-    foreign key (id_usuario_contacto) references Usuario (id_usuario) on delete cascade on update cascade
+	primary key (id_usuario,id_usuario_contacto),
+	foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade,
+	foreign key (id_usuario_contacto) references Usuario (id_usuario) on delete cascade on update cascade
 );
 create table Bloqueados(
 	id_usuario int,
 	id_usuario_bloqueado int,
-    primary key (id_usuario,id_usuario_bloqueado),
-    foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade,
-    foreign key (id_usuario_bloqueado) references Usuario (id_usuario) on delete cascade on update cascade
+	primary key (id_usuario,id_usuario_bloqueado),
+	foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade,
+	foreign key (id_usuario_bloqueado) references Usuario (id_usuario) on delete cascade on update cascade
 );
 create table Telefono(
 	id_usuario int,
-    telefono int,
-    primary key (id_usuario,telefono),
-    foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade
+	telefono int,
+	primary key (id_usuario,telefono),
+	foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade
 );
 create table Grupo_Contacto(
 	id_grupo_contacto int auto_increment,
-    id_usuario int not null,
-    nombre varchar(20) not null,
-    primary key(id_grupo_contacto),
+	id_usuario int not null,
+	nombre varchar(20) not null,
+	primary key(id_grupo_contacto),
 	foreign key (id_usuario) references Usuario (id_usuario) on delete cascade on update cascade
 );
 create table Contactos_De_Grupo(
 	id_grupo_contacto int,
-    id_usuario_contacto int,
-    primary key(id_grupo_contacto,id_usuario_contacto),
-    foreign key (id_grupo_contacto) references Grupo_Contacto (id_grupo_contacto) on delete cascade on update cascade,
+	id_usuario_contacto int,
+	primary key(id_grupo_contacto,id_usuario_contacto),
+	foreign key (id_grupo_contacto) references Grupo_Contacto (id_grupo_contacto) on delete cascade on update cascade,
 	foreign key (id_usuario_contacto) references Contactos (id_usuario_contacto) on delete cascade on update cascade
 );
 
